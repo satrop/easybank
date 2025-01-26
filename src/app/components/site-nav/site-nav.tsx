@@ -14,6 +14,7 @@ const navLinks: Link[] = [
   { text: "Services", href: "/dummy-link/" },
   { text: "Portfolio", href: "/dummy-link/" },
   { text: "Contact", href: "/dummy-link/" },
+  { text: "Winning", href: "/dummy-link/" },
 ];
 
 const Nav: React.FC = () => {

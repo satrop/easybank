@@ -1,37 +1,44 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Nav from "./components/site-nav/site-nav";
+// src/app/layout.tsx
+import { Metadata } from 'next';
+import "./globals.css"; // Your global styles
+import Nav from './components/site-nav/site-nav';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: "Easybank",
-  description: "Easybank landing page",
+  title: "My Website",
+  description: "My Next.js website with Google Fonts",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        {/* Preconnect to Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        {/* Google Fonts link */}
+    <html>
+      <Head>
+        {/* Add Google Fonts here */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap"
           rel="stylesheet"
         />
-      </head>
-      <body>
-        {/* Site Navigation */}
+      </Head>
+
+      <body className="font-public-sans">
+        {/* Navigation */}
         <Nav />
 
         {/* Main Content */}
-        <main className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-          {children}
-        </main>
+        <main>{children}</main>
       </body>
     </html>
   );
