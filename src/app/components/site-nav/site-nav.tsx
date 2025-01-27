@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Button from "../button/button";
 
 // Define link structure for mobile
 interface Link {
@@ -14,7 +15,6 @@ const navLinks: Link[] = [
   { text: "Services", href: "/dummy-link/" },
   { text: "Portfolio", href: "/dummy-link/" },
   { text: "Contact", href: "/dummy-link/" },
-  { text: "Winning", href: "/dummy-link/" },
 ];
 
 const Nav: React.FC = () => {
@@ -89,9 +89,7 @@ const Nav: React.FC = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="hidden lg:block bg-black text-white px-6 py-2 rounded-lg">
-          Sign Up
-        </button>
+        <Button className="hidden lg:block bg-black text-white px-6 py-2 rounded-lg" label="Test texts" />
       </div>
     </nav>
   );

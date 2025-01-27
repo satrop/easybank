@@ -5,8 +5,8 @@ import Nav from './components/site-nav/site-nav';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
-  title: "My Website",
-  description: "My Next.js website with Google Fonts",
+  title: "Easybank",
+  description: "Easybank, where managing your finances is easy"
 };
 
 export default function RootLayout({
