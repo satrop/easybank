@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../button/button";
 
+// Import the data
+import data from "./site-nav.json";
+
 // Define link structure for mobile
 interface Link {
   text: string;
@@ -27,7 +30,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="p-4 bg-white text-easybankBlue">
+    <nav className="p-4 lg:p-0 bg-white text-easybankBlue">
       <div className="flex items-center justify-between mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Image
@@ -58,12 +61,12 @@ const Nav: React.FC = () => {
         </button>
 
         {/* Links */}
-        <div className="hidden lg:flex space-x-6">
+        <div className="hidden lg:flex gap-7">
           {navLinks.map((link) => (
             <a
               key={link.text}
               href={link.href}
-              className="hidden lg:block hover:text-gray-400"
+              className="hidden lg:block text-gray-400 leading-extra-loose transition duration-300 hover:text-black hover:bg-easybankUnderLine hover:bg-no-repeat hover:bg-underline hover:bg-underline"
             >
               {link.text}
             </a>
@@ -89,7 +92,7 @@ const Nav: React.FC = () => {
         </div>
 
         {/* CTA Button */}
-        <Button className="hidden lg:block bg-black text-white px-6 py-2 rounded-lg" label="Test texts" />
+        <Button label={data.button_text} />
       </div>
     </nav>
   );

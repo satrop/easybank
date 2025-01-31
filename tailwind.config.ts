@@ -21,6 +21,19 @@ export default {
       fontFamily: {
         publicSans: ['Public Sans', 'sans-serif'],
       },
+      backgroundImage: {
+        'easybankGradient': 'linear-gradient(75deg, #33D35E, #2AB6D9)',
+        'easybankUnderLine': 'linear-gradient(to left, #33D35E, #2AB6D9)',
+      },
+      backgroundSize: {
+        'underline': '100% 4px', // Adjust thickness
+      },
+      backgroundPosition: {
+        'underline': '0 100%', // Align to bottom
+      },
+      lineHeight: {
+        'extra-loose': '5',
+      }
     },
   },
   plugins: [],
