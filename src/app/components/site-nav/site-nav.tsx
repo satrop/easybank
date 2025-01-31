@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Button from "../button/button";
 
-// Import the data
-import data from "./site-nav.json";
-
 // Define link structure for mobile
 interface Link {
   text: string;
@@ -92,7 +89,7 @@ const Nav: React.FC = () => {
         </div>
 
         {/* CTA Button */}
-        <Button label={data.button_text} />
+        <Button label="Request Invite" />
       </div>
     </nav>
   );

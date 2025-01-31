@@ -2,6 +2,7 @@
 import { Metadata } from 'next';
 import "./globals.css"; // Your global styles
 import Nav from './components/site-nav/site-nav';
+import Footer from './components/site-footer/Footer';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
@@ -33,12 +34,15 @@ export default function RootLayout({
         />
       </Head>
 
-      <body className="font-public-sans">
+      <body className="font-public-sans flex flex-col min-h-screen">
         {/* Navigation */}
         <Nav />
 
         {/* Main Content */}
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );

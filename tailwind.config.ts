@@ -20,6 +20,7 @@ export default {
       },
       fontFamily: {
         publicSans: ['Public Sans', 'sans-serif'],
+        icomoon: ['IcoMoon', 'sans-serif'],
       },
       backgroundImage: {
         'easybankGradient': 'linear-gradient(75deg, #33D35E, #2AB6D9)',
