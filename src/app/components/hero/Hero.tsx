@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   const { scrollY } = useScroll();
 
   return (
-    <section className="bg-gray-100">
+    <section className="hero-section">
       <div className="container mx-auto max-w-[1440px] relative lg:px-8 py-11">
         <div className="hero-background-image"></div>
         <div className="flex flex-col-reverse lg:flex-row items-center font-publicSans">
