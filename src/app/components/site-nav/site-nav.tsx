@@ -27,7 +27,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="p-4 lg:p-0 bg-white text-easybankBlue">
+    <nav className="p-4 lg:p-0 bg-white text-easybankBlue relative z-10">
       <div className="flex items-center justify-between mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Image

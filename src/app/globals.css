@@ -41,18 +41,55 @@
 
 :root {
   --background:        #ffffff;
-  --foreground:        #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:      #0a0a0a;
-    --foreground:      #ededed;
+    --background:      #fff;
   }
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: clip;
+}
+
+.text-wrap-balance {
+  text-wrap: balance;
+}
+
+.text-wrap-pretty {
+  text-wrap: pretty;
+}
+
+.hero-background-image {
+  position: absolute;
+  width: 180%;
+  height: 100%;
+  top: -44%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/bg-intro-desktop.svg');
+  background-size: 100%;
+  background-position: top center;
+  background-repeat: no-repeat;
+  margin-inline: auto;
+}
+
+
+@media (width > 640px) {
+  .hero-background-image {
+    width: 90%;
+    top: -30%;
+  }
+}
+
+@media (width > 768px) {
+  .hero-background-image {
+    width: 100%;
+    top: 0;
+    background-position: -20% center;
+    transform: none;
+  }
 }
