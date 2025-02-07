@@ -16,7 +16,7 @@ export interface CardProps {
 const Card: React.FC<CardProps> = ({ image, icon, byLine, title, text, link, imgWidth, imgHeight }) => {
   const content = (
     <motion.div
-      className={`flex flex-col overflow-clip rounded-tl-md rounded-tr-md ${image ? 'article-card' : 'why-use-card'}`}
+      className={`flex flex-col overflow-clip rounded-md ${image ? 'article-card bg-white card-hover' : 'why-use-card'}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({ image, icon, byLine, title, text, link, img
     </motion.div>
   );
 
-  return link ? <a href={link} className={` ${image ? 'card-hover bg-white rounded-bl-md rounded-br-md' : ''}`}>{content}</a> : content;
+  return link ? <a href={link} className={`${image ? '' : ''}`}>{content}</a> : content;
 };
 
 export default Card;
