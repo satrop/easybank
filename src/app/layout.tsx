@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Hero />
           <WhyUse />
           <Articles />
+          {children}
           <Footer />
         </main>
       </body>
