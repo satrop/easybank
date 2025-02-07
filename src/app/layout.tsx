@@ -17,7 +17,7 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Easybank - test 2",
+  title: "Easybank",
   description: "Easybank, where managing your finances is easy"
 };
 
