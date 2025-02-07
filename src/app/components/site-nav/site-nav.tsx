@@ -38,7 +38,7 @@ const Nav: React.FC = () => {
         </Image>
 
         {/* Mobile Menu Button */}
-        <button onClick={toggleMenu} className="lg:hidden">
+        <button onClick={toggleMenu} className="lg:hidden" aria-label="Toggle menu">
         {/* Conditional rendering based on isMenuOpen */}
         {isMenuOpen ? (
           <Image
@@ -64,6 +64,7 @@ const Nav: React.FC = () => {
               key={link.text}
               href={link.href}
               className="hidden lg:block text-gray-400 leading-extra-loose transition duration-300 hover:text-black hover:bg-easybankUnderLine hover:bg-no-repeat hover:bg-underline"
+              rel="noopener noreferrer"
             >
               {link.text}
             </a>
@@ -81,7 +82,8 @@ const Nav: React.FC = () => {
             <a
               key={link.text}
               href={link.href}
-              className="block text-easybankBlue py-2 "
+              className="block text-easybankBlue py-2"
+              rel="noopener noreferrer"
             >
               {link.text}
             </a>

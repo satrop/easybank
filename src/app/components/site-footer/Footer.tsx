@@ -35,13 +35,14 @@ const Footer: React.FC = () => {
               alt="Easybank logo"
               className="mx-auto md:mx-0"
               width={139}
-              height={20}>
+              height={20}
+              aria-label="Easybank logo">
             </Image>
             <div className="flex space-x-4 mx-auto md:mx-0">
                 <ul className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-white transition duration-300 hover:text-easybankGreen flex items-center space-x-2" aria-label={link.name}>
+                    <a href={link.href} className="text-white transition duration-300 hover:text-easybankGreen flex items-center space-x-2" aria-label={link.name} rel="noopener noreferrer">
                       <span className={link.iconClass} aria-hidden="true"></span>
                     </a>
                   </li>
@@ -52,10 +53,10 @@ const Footer: React.FC = () => {
 
           {/* Column 2: Links */}
           <div className="flex flex-col md:flex-row justify-between md:ml-10 lg:ml-20">
-            <ul className="grid md:grid-cols-2 text-center md:text-left gap-y-5 md:gap-x-20">
+            <ul className="grid md:grid-cols-2 text-center md:text-left gap-y-2 md:gap-x-20">
               {footerLink.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-white transition duration-300 hover:text-easybankGreen">{link.name}</a>
+                  <a href={link.href} className="text-white transition duration-300 hover:text-easybankGreen" rel="noopener noreferrer">{link.name}</a>
                 </li>
               ))}
             </ul>

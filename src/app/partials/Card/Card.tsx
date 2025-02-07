@@ -1,5 +1,5 @@
-// Card.tsx
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export interface CardProps {
   id: number;
@@ -15,22 +15,27 @@ export interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, icon, byLine, title, text, link, imgWidth, imgHeight }) => {
   const content = (
-    <div className={`flex flex-col gap-4 overflow-clip rounded-tl-md rounded-tr-md ${image ? 'article-card' : 'why-use-card'}`}>
+    <motion.div
+      className={`flex flex-col overflow-clip rounded-tl-md rounded-tr-md ${image ? 'article-card' : 'why-use-card'}`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {image &&
-        <div className="img-wrapper">
-          <img src={image} alt={title} width={imgWidth} height={imgHeight} className="w-full" />
+        <div className="img-wrapper overflow-clip">
+          <img src={image} alt={title} width={imgWidth} height={imgHeight} className="w-full transform transition-transform duration-300" />
         </div>
       }
-      {icon && <img src={icon} alt={title} width={imgWidth} height={imgHeight} className="flex-0" />}
-      <div className="text-section p-5 flex flex-col gap-2">
-        {byLine && <p className="text-sm text-gray-500">{byLine}</p>}
-        <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-base">{text}</p>
+      {icon && <img src={icon} alt={title} width={imgWidth} height={imgHeight} className="flex-0 mb-10" />}
+      <div className="text-section p-5 flex flex-col">
+        {byLine && <p className="text-xs mb-3 text-gray-400">{byLine}</p>}
+        <h2 className={`title text-easybankBlue ${image ? 'text-md mb-3 leading-5 transform duration-300' : 'text-xl mb-7'}`}>{title}</h2>
+        <p className={`text-base text-gray-400 ${image ? 'text-xs' : ''}`}>{text}</p>
       </div>
-    </div>
+    </motion.div>
   );
 
-  return link ? <a href={link}>{content}</a> : content;
+  return link ? <a href={link} className={` ${image ? 'card-hover bg-white rounded-bl-md rounded-br-md' : ''}`}>{content}</a> : content;
 };
 
 export default Card;
