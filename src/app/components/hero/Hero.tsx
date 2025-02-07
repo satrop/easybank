@@ -2,13 +2,13 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from "framer-motion";
 
-import Button from "../button/button";
+import Button from "../../partials/button/button";
 
 const Hero: React.FC = () => {
   const { scrollY } = useScroll();
 
   return (
-    <section className="hero-section">
+    <section className="hero-section overflow-x-clip">
       <div className="container mx-auto max-w-[1440px] relative lg:px-8 py-11">
         <div className="hero-background-image"></div>
         <div className="flex flex-col-reverse lg:flex-row items-center font-publicSans">
@@ -21,37 +21,36 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Column 2: Image */}
-          <div className="mb-8 lg:mb-0 flex-1 relative w-full min-h-[360px] md:min-h-[470px]">
-            <motion.img
-              src="/p-1.png"
-              className="absolute phone-1 left-[50%] top-0 lg:top-[-30%] w-[125px] sm:w-[170px] lg:w-auto"
-              style={{
-                x: "-50%",
-                y: useTransform(scrollY, [0, 1000], ['-25%', '-225%']),
-              }}
-            />
-            <motion.img
-              src="/p-2.png"
-              className="absolute styles.phone phone-2 left-9 sm:left-32 lg:left-10 top-0 lg:top-[-30%] w-[125px] sm:w-[170px] lg:w-auto"
-              style={{
-                y: useTransform(scrollY, [10, 2500], ['25%%', '-150%'])
-              }}
-            />
-            <motion.img
-              src="/p-3.png"
-              className="absolute styles.phone phone-3 right-9 sm:right-32 lg:right-10 top-0 lg:top-[-30%] w-[125px] sm:w-[170px] lg:w-auto"
-              style={{
-                y: useTransform(scrollY, [50, 1500], ['25%%', '-150%'])
-              }}
-            />
-            <motion.img
-              src="/p-4.png"
-              className="absolute styles.phone phone-4 left-[50%] top-[43%] lg:top-[40%] w-[125px] sm:w-[170px] lg:w-auto"
-              style={{
-                x: "-50%",
-                y: useTransform(scrollY, [25, 1000], ['0%', '-225%']),
-              }}
-            />
+           <div className="mb-32 md:mb-56 lg:mb-0 flex-1 relative w-full">
+            <div className="phone-wrapper">
+              <motion.img
+                src="/p-1.png"
+                className="phone-1"
+                style={{
+                  y: useTransform(scrollY, [0, 1000], ['-49%', '-225%']) }}
+                />
+              <motion.img
+                src="/p-2.png"
+                className="phone-2"
+                style={{
+                  y: useTransform(scrollY, [10, 2500], ['0', '-150%'])
+                }}
+              />
+              <motion.img
+                src="/p-3.png"
+                className="phone-3"
+                style={{
+                  y: useTransform(scrollY, [25, 1500], ['0', '-250%'])
+                }}
+              />
+              <motion.img
+                src="/p-4.png"
+                className="phone-4"
+                style={{
+                  y: useTransform(scrollY, [5, 1000], ['49%', '-225%']),
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

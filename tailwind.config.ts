@@ -16,7 +16,9 @@ export default {
         easybankCyan:   "#3cb3ab",
         easybankBlue50: "#f0f0f0",
         easybankGray50: "#b7b7b7",
-        easybankGray25: "#4d4d4d"
+        easybankGray25: "#4d4d4d",
+        easybankGray:   "#F4F5F7",
+
       },
       fontFamily: {
         publicSans: ['Public Sans', 'sans-serif'],

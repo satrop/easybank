@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import Button from "../button/button";
+import Button from "../../partials/button/button";
 
 // Define link structure for mobile
 interface Link {
@@ -63,7 +63,7 @@ const Nav: React.FC = () => {
             <a
               key={link.text}
               href={link.href}
-              className="hidden lg:block text-gray-400 leading-extra-loose transition duration-300 hover:text-black hover:bg-easybankUnderLine hover:bg-no-repeat hover:bg-underline hover:bg-underline"
+              className="hidden lg:block text-gray-400 leading-extra-loose transition duration-300 hover:text-black hover:bg-easybankUnderLine hover:bg-no-repeat hover:bg-underline"
             >
               {link.text}
             </a>

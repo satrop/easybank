@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-import Button from "../button/button";
+import Button from "../../partials/button/button";
 
 const socialLinks = [
   { name: "Facebook", href: "/dummy-link/", iconClass: "icon-facebook2" },
@@ -23,7 +23,7 @@ const footerLink = [
 const Footer: React.FC = () => {
   return (
     <footer className="bg-easybankBlue text-white py-10">
-      <div className="container mx-auto mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
 
         <div className="flex flex-col md:flex-row gap-y-8 md:gap-y-0">
 

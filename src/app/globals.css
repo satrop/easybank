@@ -23,6 +23,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  overflow-x: clip;
+}
+
 .icon-facebook2:before {
   content: "\ea91";
 }
@@ -41,6 +49,7 @@
 
 
 body {
+  background: #FAFAFA;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: clip;
 }
@@ -65,14 +74,16 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   margin-inline: auto;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 90%);
 }
 
+.container {
+  max-width: 100%;
+}
 
 @media (width > 640px) {
   .hero-background-image {
     width: 90%;
-    top: -30%;
+    top: -10%;
   }
 }
 
@@ -80,7 +91,45 @@ body {
   .hero-background-image {
     width: 100%;
     top: 0;
-    background-position: -20% center;
     transform: none;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 90%);
   }
+}
+
+.phone-wrapper {
+  display: grid;
+  width: 80%;
+  margin-inline: auto;
+  min-height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "mc1 mc2 mc3";
+}
+
+
+@media (width > 1024px) {
+  .hero-background-image {
+    background-position: -20% center;
+  }
+
+  .phone-wrapper {
+    width: 100%;
+  }
+}
+
+.phone-1,
+.phone-4 {
+  grid-area: mc2;
+}
+
+.phone-2 {
+  grid-area: mc1;
+}
+
+.phone-3 {
+  grid-area: mc3;
+}
+.why-use-card .text-section {
+  padding: 0;
 }
