@@ -14,6 +14,7 @@
 -   Tailwind
 -   Mobile-first workflow
 -   Framer Motion
+-   Varcel
 
 ---
 
